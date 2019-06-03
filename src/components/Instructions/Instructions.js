@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import store, { ADD_INSTRUCTION, ADD_RECIPE } from "./../../store";
+import store, { ADD_INSTRUCTION, ADD_RECIPE} from "./../../store";
 
 class Instructions extends Component {
   constructor(props) {
@@ -8,8 +8,8 @@ class Instructions extends Component {
     const reduxState = store.getState();
     this.state = {
       instructions: reduxState.instructions,
-      input: ""
-    };
+      input: ''
+    }
   }
   componentDidMount(){
     store.subscribe(() => {
@@ -30,7 +30,7 @@ class Instructions extends Component {
       payload: this.state.input
     });
     this.setState({
-      input: ""
+      input:''
     });
   }
   create() {
